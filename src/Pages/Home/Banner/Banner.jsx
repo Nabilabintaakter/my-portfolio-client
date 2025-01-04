@@ -7,7 +7,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Banner = () => {
     return (
-        <div className=" text-white flex flex-col md:flex-row items-center md:justify-between px-6 h-[900px] md:h-[500px] py-10 md:py-12 max-w-screen-2xl mx-auto">
+        <div className=" text-white flex flex-col md:flex-row items-center md:justify-between px-6 h-[700px] md:h-[500px] py-10 md:py-12 max-w-screen-2xl mx-auto">
             {/* Left Section */}
             <div className="md:w-2/3">
                 <p className="text-lg text-[#3FC8B1] font-semibold">Assalamualaikum!</p>
@@ -15,12 +15,12 @@ const Banner = () => {
                     I'm{" "}
                     <span className="text-[#3FC8B1]">
                         <Typewriter
-                            words={["Nabila Binta Akter", "A Front-End Developer"]}
+                            words={["Nabila", "A Front-End Developer"]}
                             loop={0}
                             cursor
                             cursorStyle="|"
-                            typeSpeed={60}
-                            deleteSpeed={60}
+                            typeSpeed={40}
+                            deleteSpeed={30}
                             delaySpeed={2000}
                         />
                     </span>
@@ -74,8 +74,8 @@ const Banner = () => {
             {/* Right Section */}
             <div className="md:w-1/3 mt-8 md:mt-0 flex justify-end">
                 <div className=' flex flex-col items-center'>
-                    <h2 className="text-4xl font-bold text-[#5BABEE] mb-4 lg:mb-6">Skills</h2>
-                    <div className="grid grid-cols-3 md:grid-cols-4 gap-6 text-[#4CBACE] text-7xl">
+                    <h2 className=" text-3xl md:text-4xl font-bold text-[#5BABEE] mb-4 lg:mb-6">Skills</h2>
+                    <div className="grid grid-cols-3 md:grid-cols-4 gap-6 text-[#4CBACE] text-4xl md:text-7xl">
                         <FaHtml5 className='hover:scale-110 transition-all duration-500 ease-out' title="HTML5" />
                         <FaCss3Alt className='hover:scale-110 transition-all duration-500 ease-out' title="CSS3" />
                         <SiTailwindcss className='hover:scale-110 transition-all duration-500 ease-out' title="Tailwind CSS" />
