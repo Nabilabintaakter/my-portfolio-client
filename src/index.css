@@ -6,3 +6,25 @@
 .font-jet{
   font-family: "JetBrains Mono", serif;
 }
+.resume-btn{
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: #4CBACE;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+.resume-btn:hover{
+  letter-spacing: 1.5px;
+  background-color: hsl(0, 0%, 39%);
+  color: hsl(0, 20%, 20%);
+  box-shadow: rgb(255, 255, 255) 0px 7px 7px 0px;
+}
+.resume-btn:active{
+  background-color: hsl(260, 25%, 83%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(236, 235, 240) 0px 0px 0px 0px;
+  transition: 100ms;
+}
