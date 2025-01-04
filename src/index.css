@@ -28,3 +28,6 @@
   box-shadow: rgb(236, 235, 240) 0px 0px 0px 0px;
   transition: 100ms;
 }
+li{
+  list-style-type: none;
+}
