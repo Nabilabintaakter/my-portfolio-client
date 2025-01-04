@@ -8,7 +8,7 @@ const Skills = () => {
     <div className="bg-[#0f172a] text-white py-12 px-6 mt-5 md:mt-8">
       <div className="max-w-5xl mx-auto"> 
       <h2 className="text-[#3FC8B1] text-xl md:text-2xl font-semibold mb-2 text-center">Skills</h2>
-      <hr className="w-1/5 mx-auto border-t-2 border-[#3FC8B1] mb-6 md:mb-8" />
+      <hr className="w-1/5 mx-auto border-t-2 border-[#3FC8B1] mb-6 md:mb-16" />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> 
 
           {/* Frontend Section */}
