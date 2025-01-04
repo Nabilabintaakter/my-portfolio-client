@@ -7,9 +7,9 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Banner = () => {
     return (
-        <div className=" text-white flex flex-col md:flex-row items-center md:justify-between px-6 h-[850px] md:h-[500px] py-10 md:py-12">
+        <div className=" text-white flex flex-col md:flex-row items-center md:justify-between px-6 h-[900px] md:h-[500px] py-10 md:py-12 max-w-screen-2xl mx-auto">
             {/* Left Section */}
-            <div className="md:w-1/2">
+            <div className="md:w-2/3">
                 <p className="text-lg text-[#3FC8B1] font-semibold">Assalamualaikum!</p>
                 <h1 className="text-4xl md:text-5xl font-bold mt-3">
                     I'm{" "}
@@ -19,13 +19,13 @@ const Banner = () => {
                             loop={0}
                             cursor
                             cursorStyle="|"
-                            typeSpeed={70}
-                            deleteSpeed={50}
-                            delaySpeed={1000}
+                            typeSpeed={60}
+                            deleteSpeed={60}
+                            delaySpeed={2000}
                         />
                     </span>
                 </h1>
-                <p className="text-lg mt-4">
+                <p className="md:text-lg mt-4 w-full md:w-[70%]">
                     Dedicated and enthusiastic Front-End Developer with expertise in
                     modern technologies like HTML, CSS, Tailwind CSS, DaisyUI, JavaScript, React, Node.js, Express.js, and MongoDB.
                     Passionate about crafting user-friendly and efficient web
@@ -38,7 +38,7 @@ const Banner = () => {
                         target='blank'
                     >
                         <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png"
+                            src="https://i.ibb.co.com/fM0jgs0/7089163-gmail-google-icon.png"
                             alt="Gmail"
                             className="w-8"
                         />
@@ -47,7 +47,7 @@ const Banner = () => {
                         href="https://www.facebook.com/profile.php?id=100011463773064" target='blank'
                         className="flex items-center space-x-2 text-[#3FC8B1] hover:text-[#4CBACE]"
                     >
-                        <img width="38" height="38" src="https://img.icons8.com/color/48/facebook.png" alt="facebook" />
+                        <img className='w-8' src="https://i.ibb.co.com/WzybH1k/317727-facebook-social-media-social-icon.png" alt="facebook" />
                     </a>
                     <a
                         href="https://github.com/Nabilabintaakter" target='blank'
@@ -72,17 +72,19 @@ const Banner = () => {
             </div>
 
             {/* Right Section */}
-            <div className="md:w-1/2 mt-8 md:mt-0 flex flex-col items-center">
-                <h2 className="text-3xl font-bold text-[#5BABEE] mb-4">Skills</h2>
-                <div className="grid grid-cols-3 md:grid-cols-4 gap-6 text-[#4CBACE] text-5xl">
-                    <FaHtml5 title="HTML5" />
-                    <FaCss3Alt title="CSS3" />
-                    <SiTailwindcss title="Tailwind CSS" />
-                    <SiJavascript title="JavaScript" />
-                    <FaReact title="React.js" />
-                    <FaNodeJs title="Node.js" />
-                    <SiExpress title="Express.js" />
-                    <SiMongodb title="MongoDB" />
+            <div className="md:w-1/3 mt-8 md:mt-0 flex justify-end">
+                <div className=' flex flex-col items-center'>
+                    <h2 className="text-4xl font-bold text-[#5BABEE] mb-4 lg:mb-6">Skills</h2>
+                    <div className="grid grid-cols-3 md:grid-cols-4 gap-6 text-[#4CBACE] text-7xl">
+                        <FaHtml5 className='hover:scale-110 transition-all duration-500 ease-out' title="HTML5" />
+                        <FaCss3Alt className='hover:scale-110 transition-all duration-500 ease-out' title="CSS3" />
+                        <SiTailwindcss className='hover:scale-110 transition-all duration-500 ease-out' title="Tailwind CSS" />
+                        <SiJavascript className='hover:scale-110 transition-all duration-500 ease-out' title="JavaScript" />
+                        <FaReact className='hover:scale-110 transition-all duration-500 ease-out' title="React.js" />
+                        <FaNodeJs className='hover:scale-110 transition-all duration-500 ease-out' title="Node.js" />
+                        <SiExpress className='hover:scale-110 transition-all duration-500 ease-out' title="Express.js" />
+                        <SiMongodb className='hover:scale-110 transition-all duration-500 ease-out' title="MongoDB" />
+                    </div>
                 </div>
             </div>
         </div>
