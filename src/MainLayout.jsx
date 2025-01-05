@@ -2,11 +2,13 @@ import React from 'react';
 import Navbar from './shared/Navbar/Navbar';
 import { Outlet } from 'react-router-dom';
 import Footer from './shared/Footer/Footer';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 const MainLayout = () => {
     return (
         <div className='font-jet bg-[#0F1629]'>
-            <div className='h-[76px] w-[95%] mx-auto'>
+            <ScrollToTop></ScrollToTop>
+            <div className='h-[85px] w-[95%] mx-auto'>
             <Navbar></Navbar>
             </div>
             <Outlet></Outlet>

@@ -7,24 +7,32 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Banner = () => {
     return (
-        <div className=" text-white flex flex-col md:flex-row items-center md:justify-between px-6 h-[700px] md:h-[500px] py-10 md:py-12 max-w-screen-2xl mx-auto">
+        <div className=" text-white flex flex-col md:flex-row items-center md:justify-between px-2 h-[700px] md:h-[500px] py-10 md:py-12 max-w-screen-2xl mx-auto">
             {/* Left Section */}
             <div className="md:w-2/3">
-                <p className="text-lg text-[#3FC8B1] font-semibold">Assalamualaikum!</p>
-                <h1 className="text-4xl md:text-5xl font-bold mt-3">
-                    I'm{" "}
-                    <span className="text-[#3FC8B1]">
-                        <Typewriter
-                            words={["Nabila", "A Front-End Developer"]}
-                            loop={0}
-                            cursor
-                            cursorStyle="|"
-                            typeSpeed={40}
-                            deleteSpeed={30}
-                            delaySpeed={2000}
-                        />
-                    </span>
-                </h1>
+                <p className="text-base md:text-lg text-[#3FC8B1] font-medium">Assalamualaikum!</p>
+                <div className="">
+                    <div className="mt-3">
+                        <p className="font-thin text-3xl md:text-5xl">
+                            I'm{" "}
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3FC8B1] via-white to-[#60E1CB]">
+                                Nabila
+                            </span>
+                        </p>
+                        <p className="text-[#16a58d] text-3xl md:text-5xl font-medium mt-2"> {/* Designation with margin top */}
+                            <Typewriter
+                                words={["Frontend Developer", "Web Enthusiast"]}
+                                loop={0}
+                                cursor
+                                cursorStyle="|"
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                pauseFor={1500}
+                            />
+                        </p>
+                    </div>
+                </div>
+
                 <p className="md:text-lg mt-4 w-full md:w-[70%]">
                     Dedicated and enthusiastic Front-End Developer with expertise in
                     modern technologies like HTML, CSS, Tailwind CSS, DaisyUI, JavaScript, React, Node.js, Express.js, and MongoDB.

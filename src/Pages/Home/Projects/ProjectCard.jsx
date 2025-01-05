@@ -1,27 +1,43 @@
 import React from 'react';
-import { FaGithub } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
-const ProjectCard = ({ title, imageUrl, liveLink, githubLink, technologies }) => {
-    return (
-      <div className="bg-[#1e293b] p-6 rounded-lg shadow-lg"> {/* Card styling */}
-        <img src={imageUrl} alt={title} className="w-full rounded-lg mb-4" /> {/* Project image */}
-        <h3 className="text-xl font-semibold mb-2">{title}</h3> {/* Project title */}
-        <div className="flex justify-between items-center mb-4">
-          <a href={liveLink} target="_blank" rel="noopener noreferrer" className="text-[#3FC8B1] hover:underline">see Live</a> {/* Live link */}
-        </div>
-        <a href={githubLink} target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-400 hover:text-white"> {/* Github link */}
-          <FaGithub className="mr-2" /> project github link
-        </a>
-        <div className="mt-4">
-          {technologies.map((tech) => (
-            <span key={tech} className="bg-gray-700 text-gray-300 px-2 py-1 rounded-md mr-2 text-sm">
-              {tech}
-            </span>
-          ))}
+const ProjectCard = ({ project }) => {
+  const { title, imageUrl, liveLink, description, technologies } = project || {}
+  return (
+    <div className="bg-[#1e293b] rounded-lg shadow-lg">
+      <img src={imageUrl} alt={title} className="w-full mb-4 h-[180px] object-cover" />
+      <div className='px-4'>
+        <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+        {technologies && (
+          <div className="flex flex-wrap gap-2 mt-2">
+            {technologies.map((tech) => (
+              <span
+                key={tech}
+                className="bg-gray-700 text-gray-300 px-2 py-1 rounded-md text-sm"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
+        <div className="flex gap-5 items-center my-4">
+          <Link className="bg-transparent border-2 border-[#32a893] text-white px-3 py-[6px] rounded-md hover:bg-[#32a893] transition duration-300 flex items-center" to={`/projects/${project._id}`}>View Details</Link>
+          <a
+            href={liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#3FC8B1] text-black px-4 py-2 rounded-md hover:bg-[#32a893] transition duration-300 flex items-center" // Button styles
+          >
+            Live Link
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ml-2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+            </svg>
+
+          </a>
         </div>
       </div>
-    );
-  };
-  
+    </div>
+  );
+};
 
 export default ProjectCard;

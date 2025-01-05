@@ -1,14 +1,54 @@
+import { useEffect, useState } from 'react';
 import logo from '../../assets/nabila-logo-3.png';
 import { FaDownload } from 'react-icons/fa';
+import { Link } from 'react-scroll';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 0);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     const links = <>
-        <li><NavLink to='/' className={({ isActive }) => `${isActive && 'font-medium border-b-2 border-b-[#3FC8B1]'}`}>Home</NavLink></li>
-        <li><NavLink to='/'>About</NavLink></li>
-        <li><NavLink to='/'>Education</NavLink></li>
-        <li><NavLink to='/'>Projects</NavLink></li>
-        <li><NavLink to='/'>Contact</NavLink></li>
+        <li>
+            <NavLink onClick={scrollToTop} to="/" className={({ isActive }) => `${isActive && 'font-medium border-b-2 border-b-[#3FC8B1]'}`}>
+                Home
+            </NavLink>
+        </li>
+        <li>
+            <Link to="about" className='cursor-pointer' smooth={true} duration={500}>
+                About
+            </Link>
+        </li>
+        <li>
+            <Link to="education" className='cursor-pointer'  smooth={true} duration={500}>
+                Education
+            </Link>
+        </li>
+        <li>
+            <Link to="projects" className='cursor-pointer'  smooth={true} duration={500}>
+                Projects
+            </Link>
+        </li>
+        <li>
+            <Link to="contact" className='cursor-pointer'  smooth={true} duration={500}>
+                Contact
+            </Link>
+        </li>
     </>
     return (
         <div className='w-[95%] mx-auto fixed z-50 bg-[#0F1629] bg-opacity-10 backdrop-blur-md py-2'>
@@ -31,7 +71,7 @@ const Navbar = () => {
                                     download="Nabila_Binta_Akter_Resume.pdf"
                                 >
                                     <button className="bg-[#3FC8B1] hover:bg-[#3FC8B1] text-white px-4 py-2 rounded-lg resume-btn w-fit flex items-center gap-2">
-                                    <FaDownload />  Resume
+                                        <FaDownload />  Resume
                                     </button>
                                 </a>
                             </div>

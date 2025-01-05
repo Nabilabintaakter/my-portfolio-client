@@ -9,10 +9,18 @@ const Home = () => {
     return (
         <div className='w-[95%] md:w-[90%] mx-auto'>
             <Banner></Banner>
-            <About></About>
-            <Education></Education>
-            <Skills></Skills>
-            <Projects></Projects>
+            <section id='about'>
+                <About></About>
+            </section>
+            <section id='education'>
+                <Education></Education>
+            </section>
+            <section id='skills'>
+                <Skills></Skills>
+            </section>
+            <section id='projects'>
+                <Projects></Projects>
+            </section>
         </div>
     );
 };
