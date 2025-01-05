@@ -67,16 +67,16 @@ const Banner = () => {
                 <div className="mt-6 flex space-x-4">
                     <a
                         href="https://docs.google.com/document/d/1XUZcBlDpaEgMvyWPZnibB-HraJvg9L4T1pPlOksbDGA/export?format=pdf"
-                        download="Nabila_Binta_Akter_Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
-                        <button className="bg-[#3FC8B1] hover:bg-[#3FC8B1] text-white px-4 py-2 rounded-lg resume-btn">
+                        <button className="bg-[#20c997] hover:bg-[#20c997] text-white px-4 py-2 rounded-lg resume-btn">
                             Download Resume
                         </button>
                     </a>
+
+
                 </div>
-
-
-
             </div>
 
             {/* Right Section */}

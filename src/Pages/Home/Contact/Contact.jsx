@@ -10,7 +10,7 @@ const Contact = () => {
                     <p className="text-gray-300 mb-6 font-thin">Hope you will find me fit for your desired work and your wishes will come true.</p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <input type="hidden" name="access_key" value={import.meta.env.REACT_APP_WEB3_API} />
+                    <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3_API} />
                         <input required type="text" name="form_name" placeholder="Your Name" className="bg-[#1F2937] border border-gray-600 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#3FC8B1]" />
                       
                         <input required type="email" name="email" placeholder="Email address" className="bg-[#1F2937] border border-gray-600 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#3FC8B1]" />
