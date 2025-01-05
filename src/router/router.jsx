@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
             {
                 path: "/projects/:id",
                 element: <Details></Details>,
-                loader: ({params})=> fetch(`http://localhost:5000/projects/${params.id}`)
+                loader: ({params})=> fetch(`https://my-portfolio-server-livid.vercel.app/projects/${params.id}`)
             },
         ]
     },
